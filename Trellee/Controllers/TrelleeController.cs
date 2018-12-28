@@ -15,18 +15,21 @@ namespace Trellee.Controllers
         {
             new Card
             {
+                Id = 1,
                 Title = "Make an egg",
                 Description = "Crack open the egg first."
             },
 
             new Card
             {
+                Id = 2,
                 Title = "Read a book",
                 Description = "Read Foundation 2."
             },
 
             new Card
             {
+                Id = 3,
                 Title = "Practice Guitar",
                 Description = "Memorize the pentatonic scales."
             }
@@ -40,6 +43,7 @@ namespace Trellee.Controllers
 
         public class Card
         {
+            public int Id { get; set; }
             public string Title { get; set; }
             public string Description { get; set; }
         }

@@ -10,8 +10,16 @@ export class Trellee extends Component {
       loading: true
     };
 
-    fetch('api/Trellee/ToDoCards')
-      .then(response => console.log(response))
+    fetch('api/Trellee/ToDoCards', {
+      headers : {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      }
+      })
+      .then(response => response.json())
+      .then(data => {
+        this.setState({ cards: data, loading: false })
+      })
       .catch(err => console.log(err));
   }
 
@@ -24,8 +32,10 @@ export class Trellee extends Component {
           </tr>
         </thead>
         <tbody>
-          {cards.map(card => 
-            <td>{card.title}</td>  
+          {cards.map(card =>
+            <tr key={card.id}>
+              <td>{card.title}</td>
+            </tr>
           )}
         </tbody>
       </table>

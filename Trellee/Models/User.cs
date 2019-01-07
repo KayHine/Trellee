@@ -10,5 +10,7 @@ namespace Trellee.Models
         public int ID { get; set; }
         public string LastName { get; set; }
         public string FirstName { get; set; }
+
+        public virtual ICollection<BoardSubscriptions> Subscriptions { get; set; }
     }
 }

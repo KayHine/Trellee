@@ -11,5 +11,8 @@ namespace Trellee.Models
         public int BoardID { get; set; }
         public int UserID { get; set; }
         public Boolean IsAdmin { get; set; }
+
+        public virtual Board Board { get; set; }
+        public virtual User User { get; set; }
     }
 }

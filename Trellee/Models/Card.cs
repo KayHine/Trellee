@@ -12,7 +12,11 @@ namespace Trellee.Models
         public string Description { get; set; }
         public string Comment { get; set; }
         public DateTime DueDate { get; set; }
+        public int Sequence { get; set; }
         public int Assignee { get; set; }
         public int SwimLaneID { get; set; }
+
+        public virtual User User { get; set; }
+        public virtual SwimLane SwimLane { get; set; }
     }
 }

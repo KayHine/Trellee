@@ -9,5 +9,7 @@ namespace Trellee.Models
     {
         public int ID { get; set; }
         public Boolean IsPrivate { get; set; }
+
+        public virtual ICollection<BoardSubscriptions> Subscriptions { get; set; }
     }
 }

@@ -11,5 +11,7 @@ namespace Trellee.Models
         public string Title { get; set; }
         public int BoardID { get; set; }
         public int Sequence { get; set; }
+
+        public virtual Board Board { get; set; }
     }
 }
